@@ -76,8 +76,8 @@ def client_grant():
         "https://osu.ppy.sh/oauth/token",
         headers={"Accept": "application/json", "Content-Type": "application/json"},
         json={
-            "client_id": os.environ.get("client_id"),
-            "client_secret": os.environ.get("osu_secret"),
+            "client_id": os.environ.get("CLIENT_ID"),
+            "client_secret": os.environ.get("OSU_SECRET"),
             "grant_type": "client_credentials",
             "scope": "public"
         }
