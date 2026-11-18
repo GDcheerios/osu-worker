@@ -60,10 +60,10 @@ if total_cost > api_limit:
 database = Database()
 
 database.connect(
-    os.environ.get("DB_USER", ""),
-    os.environ.get("DB_PASSWORD", ""),
-    os.environ.get("DB_HOSTNAME", ""),
-    os.environ.get("DB", "")
+    user=os.environ.get("DB_USER"),
+    password=os.environ.get("DB_PASSWORD"),
+    host=os.environ.get("DB_HOSTNAME"),
+    database=os.environ.get("DB"),
 )
 
 
