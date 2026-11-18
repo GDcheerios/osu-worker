@@ -157,13 +157,13 @@ def fetch_scores():
 
 def refresh_score(score_id: str):
     logger.info(f"Refreshing score {score_id}")
-    requests.get(f"{os.environ.get('BACKEND', "gdcheerioscom:8080")}/api/osu/scores/push/{score_id}")
+    requests.get(f"{os.environ.get('BACKEND', "http://gdcheerioscom:8080")}/api/osu/scores/push/{score_id}")
     return score_id
 
 
 def refresh_user(user_id: str):
     logger.info(f"Refreshing user {user_id}")
-    req = requests.get(f"{os.environ.get('BACKEND', "gdcheerioscom:8080")}/api/osu/fetch-user/{user_id}")
+    req = requests.get(f"{os.environ.get('BACKEND', "http://gdcheerioscom:8080")}/api/osu/fetch-user/{user_id}")
     return req.json()
 
 
